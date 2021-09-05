@@ -1,3 +1,3 @@
+var SomaFunc = require("./soma")
 
-
-console.log(soma(5,1))
+console.log(SomaFunc(27,98))
