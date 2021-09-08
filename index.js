@@ -5,6 +5,8 @@ const express = require("express");
 // (cria uma instancia) coloca a funcao express dentro de uma constante
 const app = express();
 
+//criando rotas do backend
+
 // funcao de call back que printa uma mensagem no site
 app.get("/", function(req, res){
     res.send("Seja bem-vindo ao meu app")
@@ -14,6 +16,13 @@ app.get("/", function(req, res){
 app.get("/sobre",function(req, res){
     res.send("bem vindo ao sobre")
 } )
+
+
+app.get('/ola', function(req, res){
+    res.send("ola")
+})
+
+//rodando o servidor
 
 // chama a funcao "listen" que abre um servidor na porta 8081 e chamando uma funcao de call back
 app.listen(8081, function(){
