@@ -17,9 +17,9 @@ app.get("/sobre",function(req, res){
     res.send("bem vindo ao sobre")
 } )
 
-
-app.get('/ola', function(req, res){
-    res.send("ola")
+// rota com parametros
+app.get('/ola/:nome/:cargo', function(req, res){
+    res.send("vamos conseguir essa vaga " + req.params.nome)
 })
 
 //rodando o servidor
