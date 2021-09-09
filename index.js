@@ -8,8 +8,8 @@ const app = express();
 //criando rotas do backend
 
 // funcao de call back que printa uma mensagem no site
-app.get("/", function(req, res){
-    res.send("Seja bem-vindo ao meu app")
+app.get("/alpha-omega", function(req, res){
+    res.sendFile(__dirname + "/PaginaWeb/Alpha-Omega-master/index.html")
 })
 
 //criando a pagina "sobre" atravez de uma funcao de call back
