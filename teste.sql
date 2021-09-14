@@ -7,7 +7,10 @@ create table usuarios(
 
 /*inserindo dados na tablela usuarios */
 Insert into usuarios(nome, email, idade) values(
-    "Alexander Brandao",
-    "email@gmail.com",
-    25
-):
+    "joao",
+    "email121@gmail.com",
+    9
+);
+
+/*pesquisando usuarios com idade maior ou igual a 18 anos */
+select *from usuarios where idade >= 18;
