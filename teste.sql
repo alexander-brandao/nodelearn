@@ -14,3 +14,9 @@ Insert into usuarios(nome, email, idade) values(
 
 /*pesquisando usuarios com idade maior ou igual a 18 anos */
 select *from usuarios where idade >= 18;
+
+/*deletando registros do BD */
+delete from usuarios where nome = "fulano";
+
+/*atualizando registros do DB */
+update usuarios set nome = "Alexander" where nome = "Alexander Brandao"; 

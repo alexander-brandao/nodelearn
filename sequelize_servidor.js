@@ -15,3 +15,15 @@ sequelize.authenticate().then(function(){
 }).catch(function(erro){
     console.log("falha ao se conectar: " + erro)
 })
+
+
+// models = uma referencia a sua tabela dentro do sequelize
+
+// models para postagem:
+
+const Postagem = sequelize.define('postagem',{
+    // o tipo titulo da minha tabela vai ser string
+    titulo:{
+        type: Sequelize.STRING 
+    }
+})
