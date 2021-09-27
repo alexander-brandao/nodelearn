@@ -5,25 +5,12 @@ const express = require("express");
 // (cria uma instancia) coloca a funcao express dentro de uma constante
 const app = express();
 
+// constante que recebe o handlebars
+const handlebars = require('express-handlebars')
+
 //criando rotas do backend
 
-// funcao de call back que printa uma mensagem no site
-app.get("/alpha-omega", function(req, res){
-    res.sendFile(__dirname + "/PaginaWeb/Alpha-Omega-master/index.html")
-})
 
-//criando a pagina "sobre" atravez de uma funcao de call back
-app.get("/sobre",function(req, res){
-    res.send("bem vindo ao sobre")
-} )
-
-// rota com parametros
-app.get('/ola/:nome/:cargo', function(req, res){
-    res.send("<h1>vamos conseguir essa vaga " + req.params.nome +"</h1> <br>" +
-    "<h2> Seu cargo: " + req.params.cargo + "</h2>")
-    
-
-})
 
 //rodando o servidor
 
