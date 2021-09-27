@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize')
+/* const Sequelize = require('sequelize')
 
 // criando um objeto para guardar um banco de dados
 // prametros test:nome do banco, root: nome padrao usuario, s, objeto JSON
@@ -41,3 +41,5 @@ const Usuarios = sequelize.define('usuarios',{
     }
 })
 Usuarios.sync({force: true})
+
+*/

@@ -5,8 +5,24 @@ const express = require("express");
 // (cria uma instancia) coloca a funcao express dentro de uma constante
 const app = express();
 
-// constante que recebe o handlebars
+// constante que recebe o handlebars(template engine)
 const handlebars = require('express-handlebars')
+
+
+// conexao com o banco de dados mysql
+
+// criando um objeto para guardar um banco de dados
+// prametros test:nome do banco, root: nome padrao usuario, s, objeto JSON
+const sequelize = new Sequelize('test', 'root', 'alex1230', {
+    //qual maquina esta o servidor? - localhost = meu proprio computador
+     host: "localhost",
+     // dialect: linguagem de database que o sequelize vai utilizar "mysql"
+     dialect: 'mysql'
+ })
+
+//configuracao do handlebars(template engine)
+ app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+ app.set('view engine', 'handlebars')
 
 //criando rotas do backend
 
