@@ -12,6 +12,7 @@ const handlebars = require('express-handlebars')
 // conexao com o banco de dados mysql
 
 // criando um objeto para guardar um banco de dados
+const Sequelize = require('sequelize')
 // prametros test:nome do banco, root: nome padrao usuario, s, objeto JSON
 const sequelize = new Sequelize('test', 'root', 'alex1230', {
     //qual maquina esta o servidor? - localhost = meu proprio computador
@@ -25,7 +26,9 @@ const sequelize = new Sequelize('test', 'root', 'alex1230', {
  app.set('view engine', 'handlebars')
 
 //criando rotas do backend
-
+ app.get('/cad', function(req,res){
+        res.render('formulario')
+ })
 
 
 //rodando o servidor
